@@ -3,6 +3,7 @@
 import os
 import sys
 
+# tree -I "django_env|__pycache__|*.pyc"
 
 def main():
     """Run administrative tasks."""
