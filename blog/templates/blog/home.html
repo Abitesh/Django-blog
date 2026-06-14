@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html >
+<head>
+    {%if title%}
+    <title>Django blog {{title}}</title>
+    {%else %}
+    <title>A default title</title>
+    {%endif%}
+
+</head>
+<body>
+    {% comment %} <h1>blog home!</h1> {% endcomment %}
+    {% for post in posts%}
+    <h1>{{post.title}}</h1>
+    <p>By {{post.author}} on {{post.Date_postted}}</p>
+    <p>{{post.content}} </p>
+
+    {%endfor%}
+</body>
+</html>
+
