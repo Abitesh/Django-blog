@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html >
-<head>
-    {%if title%}
-    <title>Django blog {{title}}</title>
-    {%else %}
-    <title>A default title</title>
-    {%endif%}
-</head>
-<body>
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for post in posts %}
     <h1>Blog About!</h1>
-</body>
-</html>
+    {% endfor %}
+{% endblock content %}
