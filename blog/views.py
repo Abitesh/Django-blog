@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import post
+
 
 #A list of dictinoary each associated with information of a post
 posts = [
@@ -25,7 +27,7 @@ posts = [
 
 def home(request):
     context = {
-        'posts':posts
+        'posts': post.objects.all()
     }
     return render(request,'blog/home.html',context)
 
