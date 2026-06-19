@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import post
+from .models import Post
 
 
 #A list of dictinoary each associated with information of a post
-posts = [
+Posts = [
     {
         'author':'Abi',
         'title':'Learning Django',
@@ -12,10 +12,10 @@ posts = [
         'Date_posted':'12-07-2026'
     },
     {
-        'author':'Abi',
-        'title':'Learning Django',
-        'content':'In th e part3 video template learning',
-        'Date_posted':'12-07-2026'
+        'author':'akilesh',
+        'title':'Learning 2nd post',
+        'content':'In th e part 4  video template learning',
+        'Date_posted':'12-07-2029'
     },
     {
         'author':'Tesh',
@@ -27,7 +27,7 @@ posts = [
 
 def home(request):
     context = {
-        'posts': post.objects.all()
+        'posts': Post.objects.all()
     }
     return render(request,'blog/home.html',context)
 
